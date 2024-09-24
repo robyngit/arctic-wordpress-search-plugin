@@ -1,0 +1,24 @@
+{
+  "apiVersion": 2,
+  "name": "adc/search-block",
+  "title": "ADC Search Block",
+  "version": "1.0.0",
+  "category": "common",
+  "icon": "search",
+  "attributes": {
+    "searchTerm": {
+      "type": "string",
+      "default": ""
+    },
+    "placeholderText": {
+      "type": "string",
+      "default": "Search..."
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true
+  },
+  "editorScript": "adc-search-block-editor-js",
+  "style": "adc-search-block-style"
+}

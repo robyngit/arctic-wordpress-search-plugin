@@ -1,0 +1,104 @@
+.adc-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.adc-search-form {
+  --form-height: 2.4rem;
+  --inner-padding-vertical: 0.5rem;
+  --inner-padding-horizontal: 0.9rem;
+  --icon-size: calc(var(--form-height) - 2 * var(--inner-padding-vertical));
+  --font-size: 1.1rem;
+  --font-size-button: 1rem;
+  --border-radius: 7px;
+
+  --form-bkg-color: var(--wp--preset--color--white, #f9f9f9);
+  --font-color: #333;
+  --placeholder-color: var(--wp--preset--color--cyan-bluish-gray, #667580);
+  --icon-color: var(--wp--preset--color--cyan-bluish-gray, #667580);
+  --border-color: #edf3f6;
+
+  --border-size-focus: 3px;
+
+  --border-color-focus: var(--wp--preset--color--vivid-cyan-blue);
+  --button-color: var(--wp--preset--color--vivid-cyan-blue);
+  --button-font-color: var(--wp--preset--color--white, #f9f9f9);
+
+  --input-shadow: 0 1px 8px 1px rgba(0, 0, 0, 0.09);
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 1rem;
+  padding: 0;
+  color: var(--font-color);
+  border-radius: var(--border-radius);
+
+  .adc-search-icon {
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: var(--icon-size);
+    margin: auto var(--inner-padding-horizontal);
+
+    svg {
+      fill: var(--icon-color);
+      width: var(--icon-size);
+      height: var(--icon-size);
+    }
+  }
+
+  input[type="search"].adc-search-input {
+    box-sizing: content-box;
+    width: 100%;
+    height: var(--form-height);
+    margin: 0;
+    padding: var(--inner-padding-vertical) var(--inner-padding-horizontal);
+    padding-left: calc(var(--icon-size) + 2 * var(--inner-padding-horizontal));
+    max-width: unset;
+    background-color: var(--form-bkg-color);
+    border-radius: var(--border-radius);
+    color: var(--font-color);
+    font-size: var(--font-size);
+    outline: 1px solid var(--border-color);
+    min-height: unset;
+    line-height: unset;
+    border: none;
+    box-shadow: var(--input-shadow);
+  }
+
+  input[type="search"].adc-search-input:focus {
+    outline: var(--border-size-focus) solid var(--border-color-focus);
+  }
+
+  .adc-search-input::placeholder {
+    color: var(--placeholder-color);
+  }
+
+  .adc-search-button {
+    position: absolute;
+    right: 0;
+    border: none;
+    margin: var(--inner-padding-vertical) var(--inner-padding-horizontal);
+    padding: var(--inner-padding-vertical) var(--inner-padding-horizontal);
+    background-color: var(--button-color);
+    color: white;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-button);
+    cursor: pointer;
+  }
+
+  .adc-search-button:hover {
+    filter: brightness(1.05);
+  }
+}
