@@ -17,9 +17,9 @@
 
   --form-bkg-color: var(--wp--preset--color--white, #f9f9f9);
   --font-color: #333;
-  --placeholder-color: var(--wp--preset--color--cyan-bluish-gray, #667580);
-  --icon-color: var(--wp--preset--color--cyan-bluish-gray, #667580);
-  --border-color: #edf3f6;
+  --placeholder-color: #7796aa;
+  --icon-color: #365e78;
+  --border-color: #365e78;
 
   --border-size-focus: 3px;
 
@@ -27,7 +27,7 @@
   --button-color: var(--wp--preset--color--vivid-cyan-blue);
   --button-font-color: var(--wp--preset--color--white, #f9f9f9);
 
-  --input-shadow: 0 1px 8px 1px rgba(0, 0, 0, 0.09);
+  /* --input-shadow: 0 1px 8px 1px rgba(0, 0, 0, 0.09); */
 
   position: relative;
   display: flex;
@@ -74,7 +74,6 @@
     min-height: unset;
     line-height: unset;
     border: none;
-    box-shadow: var(--input-shadow);
   }
 
   input[type="search"].adc-search-input:focus {
