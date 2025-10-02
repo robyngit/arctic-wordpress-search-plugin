@@ -47,15 +47,6 @@ const renderSearchForm = (attributes, setAttributes) =>
         "Search"
       )
     ),
-    // a button to do an advanced search
-    el(
-      "a",
-      {
-        href: "https://arcticdata.io/catalog/",
-        className: "adc-advanced-search",
-      },
-      "Advanced Search"
-    )
   );
 
 registerBlockType("adc/search-block", {

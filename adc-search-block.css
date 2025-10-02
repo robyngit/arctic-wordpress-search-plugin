@@ -13,7 +13,9 @@
   --icon-size: calc(var(--form-height) - 2 * var(--inner-padding-vertical));
   --font-size: 1.1rem;
   --font-size-button: 1rem;
-  --border-radius: 7px;
+  --border-radius: 2px;
+  --border-radius-button: 12px;
+  --border-radius-boxes: 20px;
 
   --form-bkg-color: var(--wp--preset--color--white, #f9f9f9);
   --font-color: #333;
@@ -21,10 +23,13 @@
   --icon-color: #365e78;
   --border-color: #365e78;
 
+  --adc-bright-green: #54C46D;
+
+  --border-size: 2px;
   --border-size-focus: 3px;
 
-  --border-color-focus: var(--wp--preset--color--vivid-cyan-blue);
-  --button-color: var(--wp--preset--color--vivid-cyan-blue);
+  --border-color-focus: var(--adc-bright-green);
+  --button-color: var(--adc-bright-green);
   --button-font-color: var(--wp--preset--color--white, #f9f9f9);
 
   /* --input-shadow: 0 1px 8px 1px rgba(0, 0, 0, 0.09); */
@@ -36,7 +41,6 @@
   margin: 1rem;
   padding: 0;
   color: var(--font-color);
-  border-radius: var(--border-radius);
 
   .adc-search-icon {
 
@@ -67,10 +71,10 @@
     padding-left: calc(var(--icon-size) + 2 * var(--inner-padding-horizontal));
     max-width: unset;
     background-color: var(--form-bkg-color);
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-boxes);
     color: var(--font-color);
     font-size: var(--font-size);
-    outline: 1px solid var(--border-color);
+    outline: 2px solid var(--border-color);
     min-height: unset;
     line-height: unset;
     border: none;
@@ -78,6 +82,10 @@
 
   input[type="search"].adc-search-input:focus {
     outline: var(--border-size-focus) solid var(--border-color-focus);
+
+    .adc-search-icon svg {
+      fill: var(--border-color-focus);
+    }
   }
 
   .adc-search-input::placeholder {
@@ -92,9 +100,13 @@
     padding: var(--inner-padding-vertical) var(--inner-padding-horizontal);
     background-color: var(--button-color);
     color: white;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-button);
     font-size: var(--font-size-button);
     cursor: pointer;
+    font-weight: 500;
+    /* micro adjustments */
+    margin-right: calc(var(--inner-padding-horizontal) - 0.35rem);
+    padding-bottom: calc(var(--inner-padding-vertical) + 1px);
   }
 
   .adc-search-button:hover {
