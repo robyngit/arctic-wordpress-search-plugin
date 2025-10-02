@@ -82,10 +82,6 @@
 
   input[type="search"].adc-search-input:focus {
     outline: var(--border-size-focus) solid var(--border-color-focus);
-
-    .adc-search-icon svg {
-      fill: var(--border-color-focus);
-    }
   }
 
   .adc-search-input::placeholder {
@@ -112,4 +108,7 @@
   .adc-search-button:hover {
     filter: brightness(1.05);
   }
+}
+.adc-search-form:focus-within .adc-search-icon svg {
+	fill: var(--border-color-focus) !important;
 }
