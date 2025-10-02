@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const searchForm = document.querySelector(".adc-search-form");
   const searchInput = document.querySelector(".adc-search-input");
-  console.log(searchForm);
 
   if (searchForm && searchInput) {
     searchForm.addEventListener("submit", (event) => {

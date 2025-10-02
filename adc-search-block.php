@@ -2,7 +2,7 @@
 /**
  * Plugin Name: ADC Search Block
  * Description: A custom block to create a search input for ADC.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Robyn Thiessen-Bock
  */
 
